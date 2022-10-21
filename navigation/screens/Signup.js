@@ -4,7 +4,8 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image} from 'react
 export default class Signup extends React.Component {
     state={
       email:"",
-      password:""
+      password:"",
+      username:""
     }
     
     render(){
@@ -14,7 +15,7 @@ export default class Signup extends React.Component {
           <View style={styles.inputView} >
             <TextInput  
               style={styles.inputText}
-              placeholder="Email..." 
+              placeholder="Email" 
               placeholderTextColor="white"
               onChangeText={text => this.setState({email:text})}/>
           </View>
@@ -22,18 +23,24 @@ export default class Signup extends React.Component {
             <TextInput  
               secureTextEntry
               style={styles.inputText}
-              placeholder="Password..." 
+              placeholder="Username" 
+              placeholderTextColor="white"
+              onChangeText={text => this.setState({username:text})}/>
+          </View>
+          <View style={styles.inputView} >
+            <TextInput  
+              secureTextEntry
+              style={styles.inputText}
+              placeholder="Password" 
               placeholderTextColor="white"
               onChangeText={text => this.setState({password:text})}/>
           </View>
           <TouchableOpacity style={styles.loginBtn}>
-            <Text style={styles.loginText}>LOGIN</Text>
+            <Text style={styles.loginText}>SIGN UP</Text>
           </TouchableOpacity>
+        <Text style={styles.forgot}>Already have an account?</Text>
           <TouchableOpacity>
-            <Text style={styles.forgot}>Forgot Password?</Text>
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Text style={styles.create}>Or Create a New Account</Text>
+            <Text style={styles.create}>Sign in</Text>
           </TouchableOpacity>
           <View>
           <Image resizeMode={'contain'} style={styles.image} source={require("../../images/hydrip.png")} />
