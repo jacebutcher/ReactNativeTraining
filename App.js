@@ -1,8 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image} from 'react-native';
 
-const staticImage = require("./images/hydrip.png");
-
 export default class App extends React.Component {
   state={
     email:"",
