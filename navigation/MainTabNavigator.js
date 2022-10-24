@@ -4,6 +4,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import LoginScreen from './screens/Login';
 import SignupScreen from './screens/Signup';
+import ServiceSelector from './screens/ServiceSelector';
 
 const Tab = createBottomTabNavigator();
 
@@ -21,6 +22,9 @@ function MainTabNavigator() {
                 break;
               case 'Signup':
                 iconName = `flash`;
+                break;
+              case 'ServiceSelector':
+                iconName = `flash`;
             }
             return <Ionicons name={iconName} size={size} color={color} />;
           },
@@ -33,6 +37,7 @@ function MainTabNavigator() {
         }}>
         <Tab.Screen name={'Login'} component={LoginScreen} />
         <Tab.Screen name={'Signup'} component={SignupScreen} />
+        <Tab.Screen name={'ServiceSelector'} component={ServiceSelector} />
       </Tab.Navigator>
     </NavigationContainer>
   );

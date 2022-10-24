@@ -1,6 +1,21 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image} from 'react-native';
 
+
+//HANDLERS
+///////////////////////////////////////////////////////////////////////////
+export const handleSignupPress = () => {
+    //TODO: Implement logic to process login based on Email/Password values.
+}
+
+export const handleForgotPassPress = () => {
+    //TODO: Implement logic to process password reset
+}
+
+export const handleSignInPress = () => {
+    //TODO: Implement logic to navigate to signin page.
+}
+
 export default class Signup extends React.Component {
     state={
       email:"",
@@ -40,7 +55,7 @@ export default class Signup extends React.Component {
           </TouchableOpacity>
         <Text style={styles.forgot}>Already have an account?</Text>
           <TouchableOpacity>
-            <Text style={styles.create}>Sign in</Text>
+            <Text style={styles.create}>Sign in here.</Text>
           </TouchableOpacity>
           <View>
           <Image resizeMode={'contain'} style={styles.image} source={require("../../images/hydrip.png")} />
@@ -62,7 +77,7 @@ export default class Signup extends React.Component {
       fontWeight:"bold",
       fontSize:50,
       color:"#72d9e9",
-      marginBottom:80
+      marginBottom:45
     },
     inputView:{
       width:"80%",

@@ -16,7 +16,7 @@ export const handleCreateAccPress = () => {
     //TODO: Implement logic to navigate to signup page.
 }
 
-export default class Login extends React.Component {
+export default class ServiceSelector extends React.Component {
     state={
       email:"",
       password:""
@@ -25,35 +25,10 @@ export default class Login extends React.Component {
     render(){
       return (
         <View style={styles.container}>
-          <Text style={styles.logo}>Welcome!</Text>
-          <View style={styles.inputView} >
-            <TextInput  
-              style={styles.inputText}
-              placeholder="Email..." 
-              placeholderTextColor="white"
-              onChangeText={text => this.setState({email:text})}/>
-          </View>
-          <View style={styles.inputView} >
-            <TextInput  
-              secureTextEntry
-              style={styles.inputText}
-              placeholder="Password..." 
-              placeholderTextColor="white"
-              onChangeText={text => this.setState({password:text})}/>
-          </View>
-          <TouchableOpacity onPress={handleLoginPress()} style={styles.loginBtn}>
-            <Text style={styles.loginText}>LOGIN</Text>
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Text style={styles.forgot}>Forgot Password?</Text>
-          </TouchableOpacity>
-          <TouchableOpacity>
-            <Text style={styles.create}>Or Create a New Account</Text>
-          </TouchableOpacity>
-          <View>
+            <View>
           <Image resizeMode={'contain'} style={styles.image} source={require("../../images/hydrip.png")} />
           </View>
-          <Text style={styles.disclaimer}>Hydrip Wellness 2023©</Text>
+          <Text style={styles.logo}>What brings you here today?</Text>
         </View>
       );
     }
@@ -65,12 +40,14 @@ export default class Login extends React.Component {
       backgroundColor: 'white',
       alignItems: 'center',
       justifyContent: 'center',
+      
     },
     logo:{
       fontWeight:"bold",
-      fontSize:50,
-      color:"#72d9e9",
-      marginBottom:80
+      fontSize:25,
+      color:"blue",
+      marginTop: 20,
+      ...StyleSheet.absoluteFillObject
     },
     inputView:{
       width:"80%",
@@ -110,7 +87,8 @@ export default class Login extends React.Component {
     image: {
       width: 180,
       height: 60,
-      marginTop: 80
+      marginTop: 20,
+      ...StyleSheet.absoluteFillObject
   },
     disclaimer:{
       color:"black",
