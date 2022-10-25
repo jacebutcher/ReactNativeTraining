@@ -45,10 +45,10 @@ export default class Login extends React.Component {
             <Text style={styles.loginText}>LOGIN</Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text style={styles.forgot}>Forgot Password?</Text>
+            <Text style={styles.helper}>Forgot Password?</Text>
           </TouchableOpacity>
           <TouchableOpacity>
-            <Text style={styles.create}>Or Create a New Account</Text>
+            <Text style={styles.helper}>Or Create a New Account</Text>
           </TouchableOpacity>
           <View>
           <Image resizeMode={'contain'} style={styles.image} source={require("../../images/hydrip.png")} />
@@ -85,11 +85,7 @@ export default class Login extends React.Component {
       height:50,
       color:"white"
     },
-    forgot:{
-      color:"black",
-      fontSize:14
-    },
-    create:{
+    helper:{
       color:"black",
       fontSize:14
     },
