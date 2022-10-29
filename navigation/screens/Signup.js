@@ -20,7 +20,10 @@ export default class Signup extends React.Component {
     state={
       email:"",
       password:"",
-      username:""
+      username:"",
+      key: "",
+      code: 1,
+      plan: "",
     }
     
     render(){
